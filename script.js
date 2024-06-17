@@ -31,7 +31,16 @@ function hasPassingGrade(score){
   }
 };
 
-console.log(hasPassingGrade(90));
-console.log(hasPassingGrade(77));
-console.log(hasPassingGrade(60));
-console.log(hasPassingGrade(40));
+function studentMsg(totalScores, studentScore) {
+ if (hasPassingGrade(studentScore)){
+    return `Class average: ${getAverage(totalScores)}. Your grade: ${getGrade(studentScore)}. You passed the course.`
+ } else {
+    return `Class average: ${getAverage(totalScores)}. Your grade: ${getGrade(studentScore)}. You failed the course.`
+ }
+}
+console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 37));
+
+// console.log(hasPassingGrade(90));
+// console.log(hasPassingGrade(77));
+// console.log(hasPassingGrade(60));
+// console.log(hasPassingGrade(40));
