@@ -27,7 +27,7 @@ function hasPassingGrade(score){
   if (getGrade(score) !== "F"){
     return true
   } else {
-    return "Failed"
+    return false
   }
 };
 
